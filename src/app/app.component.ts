@@ -7,14 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'practice';
-  num = 0;
+  hero = 'Prabhas';
+  color = 'orange';
 
-  counter(type:string){
-      if(type=='add'){
-        this.num++;
-      }else{
-        this.num--;
-      }
-  }
+ 
+ 
 
 }

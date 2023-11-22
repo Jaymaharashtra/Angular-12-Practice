@@ -1,4 +1,11 @@
-<h1>counter</h1>
-<button (click)="counter('add')">+</button>
-<h3>Count : {{num}}</h3>
-<button (click)="counter('')">-</button>
+<h1>Trafic Signal</h1>
+
+<ng-template [ngIf]="color==='red'" >
+  <h1 style="color: red;">Stop</h1>
+</ng-template>
+<ng-template [ngIf]="color==='orange'" >
+  <h1 style="color: orangered;">Slow</h1>
+</ng-template>
+<ng-template [ngIf]="color==='green'" >
+  <h1 style="color: green;">GO</h1>
+</ng-template>
