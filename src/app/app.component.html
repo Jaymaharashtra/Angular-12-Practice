@@ -1,11 +1,13 @@
-<h1>Trafic Signal</h1>
+<h1>Year Calculation</h1>
+<div [ngSwitch]="Year">
 
-<ng-template [ngIf]="color==='red'" >
-  <h1 style="color: red;">Stop</h1>
-</ng-template>
-<ng-template [ngIf]="color==='orange'" >
-  <h1 style="color: orangered;">Slow</h1>
-</ng-template>
-<ng-template [ngIf]="color==='green'" >
-  <h1 style="color: green;">GO</h1>
-</ng-template>
+  
+  <h1 *ngSwitchCase="'Jan'">1</h1>
+  <h1 *ngSwitchCase="'Feb'">2</h1>
+  <h1 *ngSwitchCase="'Mar'">3</h1>
+  <h1 *ngSwitchCase="'Apr'">4</h1>
+  <h1 *ngSwitchCase="'May'">5</h1>
+  <h1 *ngSwitchCase="'Jun'">6</h1>
+  <h1 *ngSwitchDefault="">Unkown Entity</h1>
+  
+</div>
