@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'for loops';
   user = ['Nayan', 'Rutuja', 'Adesh', 'Nitin', 'Gaurav'];
+  font = 'san-serif';
 
   client = [
     {name : 'Arush', service : ['Social Media Handle'], Location : 'Paris'},
@@ -15,4 +16,8 @@ export class AppComponent {
     {name : 'Nilesh', service : ['Accountant','Marketing','Client Handeling'], Location : 'Itely'},
     {name : 'Ravi', service : ['Aadhar Enrol','License','MSME'], Location : 'India'},
   ];
+
+  updateColor(){
+    this.font='green';
+  }
 }
