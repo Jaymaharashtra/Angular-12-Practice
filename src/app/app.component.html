@@ -1,13 +1,13 @@
-<h1>Year Calculation</h1>
-<div [ngSwitch]="Year">
+<h1>{{ title }}</h1>
 
-  
-  <h1 *ngSwitchCase="'Jan'">1</h1>
-  <h1 *ngSwitchCase="'Feb'">2</h1>
-  <h1 *ngSwitchCase="'Mar'">3</h1>
-  <h1 *ngSwitchCase="'Apr'">4</h1>
-  <h1 *ngSwitchCase="'May'">5</h1>
-  <h1 *ngSwitchCase="'Jun'">6</h1>
-  <h1 *ngSwitchDefault="">Unkown Entity</h1>
-  
-</div>
+<h5 *ngFor="let item of user">{{ item }}</h5>
+
+<h1>Cilent Details</h1>
+
+<ul *ngFor="let client_info of client">
+  <li>{{ client_info.name }}</li>
+  <ul >
+    <li *ngFor="let serv of client_info.service">{{ serv }}</li>
+  </ul>
+  <li>{{ client_info.Location }}</li>
+</ul>
