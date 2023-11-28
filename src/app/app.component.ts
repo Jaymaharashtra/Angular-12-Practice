@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -7,17 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'for loops';
-  user = ['Nayan', 'Rutuja', 'Adesh', 'Nitin', 'Gaurav'];
-  font = 'san-serif';
+  
+  data:any = { };
 
-  client = [
-    {name : 'Arush', service : ['Social Media Handle'], Location : 'Paris'},
-    {name : 'Ajay', service : ['SEO','Marketing','Client Handeling'], Location : 'India'},
-    {name : 'Nilesh', service : ['Accountant','Marketing','Client Handeling'], Location : 'Itely'},
-    {name : 'Ravi', service : ['Aadhar Enrol','License','MSME'], Location : 'India'},
-  ];
 
-  updateColor(){
-    this.font='green';
+  show(data:NgForm){
+    console.log(data);
+    this.data = data;
+    let info = document.getElementsByTagName('p');
+    
   }
 }

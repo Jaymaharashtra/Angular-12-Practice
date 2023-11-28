@@ -1,13 +1,14 @@
-<h1>{{ title }}</h1>
-
-<h5 *ngFor="let item of user">{{ item }}</h5> //Only for signle loop
-<button (click)="updateColor()">Update</button>
-<h1 [style.font-style]="font" >Cilent Details</h1>
-//Start Nested loop
-<ul  *ngFor="let client_info of client">
-  <li>{{ client_info.name }}</li>
-  <ul >
-    <li *ngFor="let serv of client_info.service">{{ serv }}</li>
-  </ul>
-  <li>{{ client_info.Location }}</li>
-</ul>
+<div class="container">
+  <form #basicForm="ngForm" (ngSubmit)="show(basicForm.value)">
+    <span>Login Form</span> <br> 
+    <input type="text" ngModel name="user" placeholder="username"/>
+      <br/>
+      <br/>
+      <input type="password" ngModel name="pass" placeholder="password"/>
+      <br/>
+      <br/>
+      <button>Start</button>
+    </form>
+    <p>{{data.user}}</p>
+    <p>password : {{data.pass}}</p>
+</div>
