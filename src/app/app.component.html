@@ -1,14 +1,5 @@
-<div class="container">
-  <form #basicForm="ngForm" (ngSubmit)="show(basicForm.value)">
-    <span>Login Form</span> <br> 
-    <input type="text" ngModel name="user" placeholder="username"/>
-      <br/>
-      <br/>
-      <input type="password" ngModel name="pass" placeholder="password"/>
-      <br/>
-      <br/>
-      <button>Start</button>
-    </form>
-    <p>{{data.user}}</p>
-    <p>password : {{data.pass}}</p>
+<div>
+  <h1>{{title}}</h1>
+  <h1 *ngIf="display">Hello Mick</h1>
+  <button (click)="show()">Hit Me</button>
 </div>

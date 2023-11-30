@@ -7,15 +7,9 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'for loops';
-  
-  data:any = { };
-
-
-  show(data:NgForm){
-    console.log(data);
-    this.data = data;
-    let info = document.getElementsByTagName('p');
-    
+  title = 'Toggle';
+  display = true;
+  show(){
+    this.display=!this.display;
   }
 }
