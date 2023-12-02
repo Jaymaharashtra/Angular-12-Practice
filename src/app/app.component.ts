@@ -7,9 +7,16 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'Toggle';
-  display = true;
-  show(){
-    this.display=!this.display;
+  title = 'for loops';
+  task:any[]=[];
+
+  addTask(item:string){
+    console.log(item);
+    this.task.push({id:this.task.length, name:item});
   }
+
+  remove(id:number){
+    this.task = this.task.filter(item=>item.id!==id);
+  }
+  
 }
