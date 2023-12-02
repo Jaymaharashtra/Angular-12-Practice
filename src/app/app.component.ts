@@ -7,16 +7,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'for loops';
-  task:any[]=[];
-
-  addTask(item:string){
-    console.log(item);
-    this.task.push({id:this.task.length, name:item});
-  }
-
-  remove(id:number){
-    this.task = this.task.filter(item=>item.id!==id);
-  }
+  title = 'Send Data From Parent to Child';
   
+  userDetails = [
+    {name : "Suraj", Role : "Data Science"},
+    {name : "Amit", Role : "DevOps"},
+    {name : "Nishant", Role : "Data Engineer"},
+    {name : "Yogiraj", Role : "App Mod"},
+    {name : "Nitin", Role : "Angular Developer"}
+  ]
 }

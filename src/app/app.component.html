@@ -1,8 +1,4 @@
-<h3>To Do list</h3>
-
-<input type="text" placeholder="Enter your task..." #data/><br>
-<button (click)="addTask(data.value)">Add Task</button>
-
-<ul *ngFor="let lst of task">
-    <li>{{lst.name}} <button (click)="remove(lst.id)">Remove</button> </li>
+<h1>{{title}}</h1>
+<ul *ngFor="let item of userDetails">
+    <app-child [data]="item"></app-child>
 </ul>
