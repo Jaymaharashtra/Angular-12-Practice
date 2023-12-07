@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import {UserDataService} from './Service/user-data.service'
 
 @Component({
   selector: 'app-root',
@@ -8,12 +9,10 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'Send Data From Parent to Child';
-  
-  userDetails = [
-    {name : "Suraj", Role : "Data Science"},
-    {name : "Amit", Role : "DevOps"},
-    {name : "Nishant", Role : "Data Engineer"},
-    {name : "Yogiraj", Role : "App Mod"},
-    {name : "Nitin", Role : "Angular Developer"}
-  ]
+  users:any;
+  constructor(private userdata : UserDataService){
+    console.log("userdata",userdata.user());
+    this.users = userdata.user();
+  }
+ 
 }
