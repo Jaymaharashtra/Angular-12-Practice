@@ -3,6 +3,12 @@ import { NgForm } from '@angular/forms';
 import {UserDataService} from './Service/user-data.service'
 import {DataSetService} from './Service/data-set.service'
 
+interface dataType{
+  name:string,
+  id:number,
+  add:any
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,15 +16,17 @@ import {DataSetService} from './Service/data-set.service'
 })
 export class AppComponent {
   title = 'Send Data From Parent to Child';
-  users:any;
-  constructor(private dataset : DataSetService){
-   
-     dataset.funDataSet().subscribe((data)=>{
-      this.users = data;
-      console.log('data',data);
-    })
-  }
+ 
+  constructor(){  }
 
+  getdata(){
+    const data:dataType= {
+      name:'pratham',
+      id:100,
+      add: "19 Bhosari Pune"
+    }
+    return data;
+   }
   
  
 }
